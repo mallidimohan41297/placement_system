@@ -1,0 +1,14 @@
+CXX      = g++
+CXXFLAGS = -std=c++11 -Wall -Wextra
+TARGET   = pms
+SRC      = placement_system.cpp
+
+all: $(TARGET)
+
+$(TARGET): $(SRC)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
+
+clean:
+	rm -f $(TARGET) *.txt *.csv
+
+.PHONY: all clean
